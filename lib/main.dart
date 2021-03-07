@@ -1,27 +1,19 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:hope_contador_flutter/src/app.dart';
+
+//importaciones propias
+
+
+
+
+
 void main() {
 
-  runApp( new MyApp() );
+  runApp( MyApp() );
   
 }
 
 
 
-class MyApp extends StatelessWidget {
-
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: 
-    Center (
-     child: Text('Esto es una prueba') ,
-    ),
-  ) ;
-}
-
-
-
-}
