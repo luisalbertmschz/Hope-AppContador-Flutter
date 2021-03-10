@@ -9,6 +9,8 @@ class HomePage extends StatelessWidget {
 
   final TextStyle estilotexto = new TextStyle(fontSize:25,color: Colors.blueGrey, );
 
+  final int cantboleto = 2 ;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +32,7 @@ class HomePage extends StatelessWidget {
             children: [
 
                Text('Boletos Comprados:', style: estilotexto),
-               Text('🎫 20 ', style: estilotexto, )
+               Text('🎫 $cantboleto', style: estilotexto, )
 
             ],
           ),
@@ -38,10 +40,15 @@ class HomePage extends StatelessWidget {
 
         floatingActionButton: FloatingActionButton(
           onPressed: (){
-            print('Añadir Boleto x1')
+            print('Añadir Boleto x1');
+            // cantboleto = cantboleto + 1;
           },
           child: Icon( Icons.confirmation_num),
-        ) ,
+          
+        
+        ),
+        // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      
 
     );
   }
