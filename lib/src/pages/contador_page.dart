@@ -49,22 +49,56 @@ class _ContadorPageState extends State<ContadorPage> {
           ),
         ),
 
-        floatingActionButton: FloatingActionButton(
-          onPressed: (){
-            print('Añadir Boleto x1');
-            _cantboleto++;
-            setState(() {
-                          
-                        });
-          },
-          child: Icon( Icons.confirmation_num),
-
-
-        ),
+        floatingActionButton: _crearBotones()
         // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
 
 
     );
   }
+
+
+    Widget _crearBotones() {
+
+      return Row(
+
+      mainAxisAlignment: MainAxisAlignment.end,
+         
+      children:<Widget> [
+          
+      SizedBox(width: 30.0),    
+      FloatingActionButton( onPressed:_resetcero,child: Icon(Icons.exposure_zero),),
+      Expanded(child: SizedBox()),
+      FloatingActionButton( onPressed:_decrementar,child: Icon(Icons.remove_circle),),
+      SizedBox(width: 5.0),
+      FloatingActionButton( onPressed:_agregar,child: Icon(Icons.add_circle),),
+          
+        ],
+
+      );
+
+
+    }
+
+
+    void _agregar(){
+
+      setState(() => _cantboleto++);
+
+    }
+
+
+    void _decrementar(){
+
+      setState(() => _cantboleto--);
+
+    }
+
+
+    void _resetcero(){
+
+      setState(() => _cantboleto=0);
+
+    }
+
 
 }
